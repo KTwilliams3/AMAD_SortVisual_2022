@@ -5,11 +5,16 @@ public partial class SortPage : ContentPage
 	int numValues = 50;
 	Values values = null;
 	InsertionSort iSort = null;
+	SelectionSorter sSort = null;
+	BubbleSorter bSort = null;
+
 	public SortPage()
 	{
 		InitializeComponent();
 		this.values = new Values(numValues, hsl);
-		this.iSort = new InsertionSort(values);
+		this.iSort = new InsertionSort(values, 100);
+		this.sSort = new SelectionSorter(values, 100);
+		this.bSort = new BubbleSorter(values, 100);
 	}
 
 	void GenerateValues(object sender, EventArgs args)
@@ -20,5 +25,13 @@ public partial class SortPage : ContentPage
 	void InsertSort(object sender, EventArgs args)
 	{
 		iSort.Sort();
+	}
+	void BubbleSort(object sender, EventArgs args)
+	{
+		bSort.Sort();
+	}
+	void SelectSort(object sender, EventArgs args)
+	{
+		sSort.Sort();
 	}
 }
