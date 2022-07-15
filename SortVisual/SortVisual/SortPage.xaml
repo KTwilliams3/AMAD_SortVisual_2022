@@ -14,7 +14,7 @@
 
         <Button Text="Generate Values"
                 Clicked="GenerateValues"/>
-
+s
         <HorizontalStackLayout>
             <Button Text="Bubble Sort"
                      Clicked="BubbleSort"/>
