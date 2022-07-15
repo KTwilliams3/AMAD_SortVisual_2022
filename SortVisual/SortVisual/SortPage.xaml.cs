@@ -2,6 +2,7 @@ namespace SortVisual;
 
 public partial class SortPage : ContentPage
 {
+	int delay = 10;
 	int numValues = 50;
 	Values values = null;
 	InsertionSort iSort = null;
@@ -12,9 +13,9 @@ public partial class SortPage : ContentPage
 	{
 		InitializeComponent();
 		this.values = new Values(numValues, hsl);
-		this.iSort = new InsertionSort(values, 100);
-		this.sSort = new SelectionSorter(values, 100);
-		this.bSort = new BubbleSorter(values, 100);
+		this.iSort = new InsertionSort(values, delay);
+		this.sSort = new SelectionSorter(values, delay);
+		this.bSort = new BubbleSorter(values, delay);
 	}
 
 	void GenerateValues(object sender, EventArgs args)
